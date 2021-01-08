@@ -1,0 +1,39 @@
+[
+  null,
+  {
+    "name" : "Bulbasaur",
+    "type": ["Grass", "Poison"],
+    "hp" : 45,
+    "atk": 49,
+    "def": 49,
+    "spd": 45,
+    "spc": 65,
+    "learnset": {
+      "1" : ["Tackle", "Growl"]
+    }
+  },
+  {
+    "name" : "Charmander",
+    "type": ["Fire", "Fire"],
+    "hp" : 39,
+    "atk": 52,
+    "def": 43,
+    "spd": 65,
+    "spc": 50,
+    "learnset": {
+      "1" : ["Scratch", "Growl"]
+    }
+  },
+  {
+    "name" : "Squirtle",
+    "type": ["Water", "Water"],
+    "hp" : 44,
+    "atk": 48,
+    "def": 65,
+    "spd": 43,
+    "spc": 50,
+    "learnset": {
+      "1" : ["Tackle", "Tail Whip"]
+    }
+  }
+]

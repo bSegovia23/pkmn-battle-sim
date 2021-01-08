@@ -1,24 +1,24 @@
 {
   "Tackle" :
   {
-    "moveType" : "Normal",
+    "type" : "Normal",
     "power" : 35,
     "accuracy" : 95
   },
   "Scratch" :
   {
-    "moveType" : "Normal",
+    "type" : "Normal",
     "power" : 40,
     "accuracy" : 100
   },
   "Growl" :
   {
-    "moveType" : "Normal",
+    "type" : "Normal",
     "accuracy" : 100
   },
   "Tail Whip" :
   {
-    "moveType" : "Normal",
+    "type" : "Normal",
     "accuracy" : 100
   }
 }
