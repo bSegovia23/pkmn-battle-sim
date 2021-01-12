@@ -1,41 +1,46 @@
 import math
-import json
 import random
 
-with open("mons.json", "r") as mons:
-  mons = json.load(mons)
-with open("moves.json", "r") as moves:
-  moves = json.load(moves)
+from consts import *
+
+from mons import mons
+from moves import moves, type_id_to_name
 
 class Move:
-  def __init__(self, name):
-    self.__name = name
-    self.__type = moves[name].get("type")
-    self.__power = moves[name].get("power")
-    self.__accuracy = moves[name].get("accuracy")
+  def __init__(self, id):
+    self.__name = moves[id][MOVE_NAME]
+    self.__type = moves[id][MOVE_TYPE]
+    self.__power = moves[id][POWER]
+    self.__accuracy = math.floor(2.55 * moves[id][ACCURACY])
+    # accuracies are stored as fractions out of 256
+    # to convert from percentage to /256, multiply by 2.55 and round down
+    # to convert from /256 to percentage, divide by 2.56 and round up
 
   def get_name(self):
     return self.__name
   def get_type(self):
     return self.__type
+  def get_type_name(self):
+    return type_id_to_name[self.__type]
   def get_power(self):
     return self.__power
   def get_accuracy(self):
     return self.__accuracy
+  def get_accuracy_100(self):
+    return math.ceil(self.__accuracy / 2.56)
 
 class Pkmn:
-  def __init__(self, const, level):
-    index = const.value
-    self.__name = mons[index]["name"]
+  def __init__(self, id, level):
+    self.__name = mons[id][MON_NAME]
     self.__level = level
-    self.__type = mons[index]["type"]
+    self.__type = mons[id][MON_TYPE]
 
     # base stats
-    self.__atk_base = mons[index]["atk"]
-    self.__def_base = mons[index]["def"]
-    self.__spc_base = mons[index]["spc"]
-    self.__spd_base = mons[index]["spd"]
-    self.__hp_base = mons[index]["hp"]
+    self.__atk_base = mons[id][ATK]
+    self.__def_base = mons[id][DEF]
+    self.__spc_base = mons[id][SPC]
+    self.__spd_base = mons[id][SPD]
+    self.__hp_base = mons[id][HP]
 
     # generate IVs
     # https://bulbapedia.bulbagarden.net/wiki/Individual_values#Generation_I_and_II
@@ -56,7 +61,7 @@ class Pkmn:
     self.__generate_stats()
     self.__hp_current = self.__hp
 
-    self.__learnset = mons[index]["learnset"]
+    self.__learnset = mons[id][LEARNSET]
     self.__generate_moveset()
     self.__usable_moves = self.__moveset
     
@@ -78,14 +83,16 @@ class Pkmn:
 
   def __generate_moveset(self):
     moveset = {}
-    movesetPos = 1 # cycles through 1-4
-    for lvl in range(self.__level+1):
-      if self.__learnset.get(str(lvl)) != None:
-        for move in self.__learnset[str(lvl)]:
-          moveset[movesetPos] = Move(move)
-          movesetPos += 1
-          if movesetPos > 4:
-            movesetPos = 1 # after learning move 4, back to move 1
+    moveset_pos = 1 # cycles through 1-4
+    for entry in self.__learnset:
+      if entry[0] <= self.__level:
+        for move in entry[1:]:
+          moveset[moveset_pos] = Move(move)
+          moveset_pos += 1
+          if moveset_pos > 4:
+            moveset_pos = 1 # after learning move 4, back to move 1
+      else:
+        break
     self.__moveset = moveset
   
   def damage_hp(self, damage):
@@ -101,6 +108,8 @@ class Pkmn:
     return self.__level
   def get_type(self):
     return self.__type
+  def get_type_name(self):
+    return type_id_to_name[self.__type]
 
   def get_hp(self):
     return self.__hp

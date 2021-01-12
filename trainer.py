@@ -1,5 +1,5 @@
 import random
-from consts import Cnd
+from consts import *
 from pkmn import Pkmn
 
 class Trainer:
@@ -26,7 +26,7 @@ class Trainer:
     print(self.__class_, "sent out", which_mon.get_name() + '!')
   def first_conscious_mon(self):
     for mon in self.__party:
-      if mon.get_status() != Cnd.FNT:
+      if mon.get_status() != FNT:
         return mon
     return None
   def print_party(self):
