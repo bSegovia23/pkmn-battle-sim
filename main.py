@@ -90,17 +90,31 @@ def execute_move(user, target, move, prefix):
         print("(In Gen 1, moves with 100% accuracy can still miss 1/256 of the time.)")
       return False
   # do damage if possible
-  # TO-DO: implement more modifiers, type effectiveness, physical/special
+  # TO-DO: implement more modifiers
   if move.get_power():
     # https://bulbapedia.bulbagarden.net/wiki/Damage#Damage_calculation
+    if move.get_type() in physical_types:
+      atk = user.get_eff_atk()
+      dfs = target.get_eff_def()
+    else:
+      atk = user.get_eff_spc()
+      dfs = target.get_eff_spc()
     rand = random.randint(217,255)
     stab = (1.5 if move.get_type() in user.get_type() else 1)
-    type = 1 # type effectiveness to be implemented
+    type_ = type_matchup[move.get_type()][target.get_type()[0]]
+    if target.get_type()[1]:
+      type_ *= type_matchup[move.get_type()][target.get_type()[1]] # if target is monotype, target.get_type() should be [some type, None]
     other = 1 # 1 in most cases, other cases to be implemented
-    mod = rand * stab * type * other
-    damage = ((((2 * user.get_level()) // 5 + 2) * move.get_power() * (user.get_eff_atk() // target.get_eff_def()) // 50 + 2) * mod) // 255 # integer division by 255 complements random variable
+    mod = rand * stab * type_ * other
+    damage = ((((2 * user.get_level()) // 5 + 2) * move.get_power() * (atk // dfs) // 50 + 2) * mod) // 255
     target.damage_hp(damage)
     print("Did", damage, "damage!")
+    if type_ == 0:
+      print("It had no effect.")
+    elif type_ <= 0.5:
+      print("It's not very effective...")
+    elif type_ >= 2:
+      print("It's super effective!")
   # TO-DO: non-damaging effects
 
 def faint_check(trainer, is_enemy = False):

@@ -1,0 +1,10 @@
+TO-DO: use accuracy formula with in-battle modifiers
+# main.py, line 83
+TO-DO: implement more modifiers
+# main.py, line 93
+TO-DO: non-damaging effects
+# main.py, line 104
+TO-DO: allow for more actions in a turn than making a move, e.g. healing
+# main.py, line 116
+TO-DO: have "effective" stats, i.e. after increased/decreased with in-battle multipliers
+# main.py, line 125

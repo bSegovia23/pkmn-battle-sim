@@ -131,3 +131,5 @@ class Pkmn:
     return self.__def
   def get_eff_spd(self):
     return self.__spd
+  def get_eff_spc(self):
+    return self.__spc
