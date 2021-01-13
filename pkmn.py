@@ -9,21 +9,25 @@ from moves import moves, type_id_to_name
 class Move:
   def __init__(self, id):
     self.__name = moves[id][MOVE_NAME]
-    self.__type = moves[id][MOVE_TYPE]
+    self.__effect = moves[id][EFFECT]
     self.__power = moves[id][POWER]
+    self.__type = moves[id][MOVE_TYPE]
     self.__accuracy = math.floor(2.55 * moves[id][ACCURACY])
+    self.__pp = moves[id][PP]
     # accuracies are stored as fractions out of 256
     # to convert from percentage to /256, multiply by 2.55 and round down
     # to convert from /256 to percentage, divide by 2.56 and round up
 
   def get_name(self):
     return self.__name
+  def get_effect(self):
+    return self.__effect
+  def get_power(self):
+    return self.__power
   def get_type(self):
     return self.__type
   def get_type_name(self):
     return type_id_to_name[self.__type]
-  def get_power(self):
-    return self.__power
   def get_accuracy(self):
     return self.__accuracy
   def get_accuracy_100(self):
@@ -59,7 +63,13 @@ class Pkmn:
     self.__hp_ev = 0
 
     self.__generate_stats()
+    
+    # initialize stats that will be modified in battle
     self.__hp_current = self.__hp
+    self.__atk_stage = 0
+    self.__def_stage = 0
+    self.__spc_stage = 0
+    self.__spd_stage = 0
 
     self.__learnset = mons[id][LEARNSET]
     self.__generate_moveset()
@@ -81,6 +91,32 @@ class Pkmn:
     else:
       return math.floor(((base + iv) * 2 + math.floor(math.ceil(math.sqrt(ev)) / 4)) * level / 100) + 5
 
+  # https://bulbapedia.bulbagarden.net/wiki/Statistic#Stage_multipliers
+  def mod_current_hp(self, mod):
+    self.__hp_current += mod
+    self.__hp_current = max(self.__hp_current, 0)
+    self.__hp_current = min(self.__hp_current, self.__hp)
+  def mod_atk_stage(self, mod):
+    num_stages = 6
+    self.__atk_stage += mod
+    self.__atk_stage = max(self.__atk_stage, -num_stages)
+    self.__atk_stage = min(self.__atk_stage, num_stages)
+  def mod_def_stage(self, mod):
+    num_stages = 6
+    self.__def_stage += mod
+    self.__def_stage = max(self.__def_stage, -num_stages)
+    self.__def_stage = min(self.__def_stage, num_stages)
+  def mod_spc_stage(self, mod):
+    num_stages = 6
+    self.__spc_stage += mod
+    self.__spc_stage = max(self.__spc_stage, -num_stages)
+    self.__spc_stage = min(self.__spc_stage, num_stages)
+  def mod_spd_stage(self, mod):
+    num_stages = 6
+    self.__spd_stage += mod
+    self.__spd_stage = max(self.__spd_stage, -num_stages)
+    self.__spd_stage = min(self.__spd_stage, num_stages)
+
   def __generate_moveset(self):
     moveset = {}
     moveset_pos = 1 # cycles through 1-4
@@ -94,10 +130,6 @@ class Pkmn:
       else:
         break
     self.__moveset = moveset
-  
-  def damage_hp(self, damage):
-    self.__hp_current -= damage
-    self.__hp_current = max(self.__hp_current, 0)
 
   def set_status(self, status):
     self.__status = status
@@ -124,12 +156,28 @@ class Pkmn:
 
   # TO-DO: have "effective" stats
   # i.e. after increased/decreased with in-battle multipliers
-  # https://bulbapedia.bulbagarden.net/wiki/Statistic#In_battle
+  # https://bulbapedia.bulbagarden.net/wiki/Statistic#Stage_multipliers
   def get_eff_atk(self):
-    return self.__atk
+    if self.__atk_stage >= 0:
+      mult = (2 + self.__atk_stage) / 2
+    else:
+      mult = 2 / (2 - self.__atk_stage)
+    return math.floor(mult * self.__atk)
   def get_eff_def(self):
-    return self.__def
+    if self.__def_stage >= 0:
+      mult = (2 + self.__def_stage) / 2
+    else:
+      mult = 2 / (2 - self.__def_stage)
+    return math.floor(mult * self.__def)
   def get_eff_spd(self):
-    return self.__spd
+    if self.__spd_stage >= 0:
+      mult = (2 + self.__spd_stage) / 2
+    else:
+      mult = 2 / (2 - self.__spd_stage)
+    return math.floor(mult * self.__spd)
   def get_eff_spc(self):
-    return self.__spc
+    if self.__spc_stage >= 0:
+      mult = (2 + self.__spc_stage) / 2
+    else:
+      mult = 2 / (2 - self.__spc_stage)
+    return math.floor(mult * self.__spc)

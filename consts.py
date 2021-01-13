@@ -68,12 +68,12 @@ SUPER_EFFECTIVE = 2
 NUM_TYPES = 16 # we are including BIRD type if we want Missingno later
 # type_matchup[TYPE1][TYPE2] is one of the former four constants
 type_matchup = []
-# construct default type chart
+# construct initial type chart
 for i in range(NUM_TYPES):
-  # define type_matchup[i]
+  # initialize type_matchup[i]
   type_matchup.append([])
   for j in range(NUM_TYPES):
-    # define type_matchup[i][j] as EFFECTIVE, may be changed later
+    # initialize type_matchup[i][j] as EFFECTIVE, may be changed later
     type_matchup[i].append(EFFECTIVE)
 # set up Gen I type matches
 type_matchup[WATER][FIRE] = SUPER_EFFECTIVE

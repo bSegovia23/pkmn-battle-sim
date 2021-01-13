@@ -18,7 +18,7 @@ mons = [
   ],
   [
     "Charmander", # NAME
-    [FIRE, FIRE], # TYPE
+    [FIRE, None], # TYPE
     39, # HP
     52, # ATK
     43, # DEF
@@ -30,7 +30,7 @@ mons = [
   ],
   [
     "Squirtle", # NAME
-    [WATER, WATER], # TYPE
+    [WATER, None], # TYPE
     44, # HP
     48, # ATK
     65, # DEF

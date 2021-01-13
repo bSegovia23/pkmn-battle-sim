@@ -24,14 +24,14 @@ else:
 def health_bar(mon):
   ratio = mon.get_hp_current() / mon.get_hp()
   bar = '['
-  for i in range(1,11):
-    if i <= ratio * 10:
-      bar += '#'
+  width = 10
+  for i in range(width):
+    if i <= ratio * width:
+      bar += '|'
     else:
       bar += '_'
   bar += ']'
   return bar
-
 
 def display_mon_state(mon, buffer = ''):
   print(buffer + mon.get_name())
@@ -73,8 +73,12 @@ def first_round_setup(player, enemy):
 def clear():
   os.system('cls' if os.name == 'nt' else 'clear')
 
-def execute_move(user, target, move, prefix):
-  print(prefix + user.get_name(), "used", move.get_name() + "!")
+def battle_msg(string, is_enemy = False):
+  prefix = ("Enemy " if is_enemy else '')
+  print(prefix + string)
+
+def execute_move(user, target, move, is_enemy = False):
+  battle_msg(user.get_name() + " used " + move.get_name() + "!", is_enemy)
   # make sure the target exists/did not faint
   if not target:
     print("But it failed...")
@@ -103,33 +107,38 @@ def execute_move(user, target, move, prefix):
     stab = (1.5 if move.get_type() in user.get_type() else 1)
     type_ = type_matchup[move.get_type()][target.get_type()[0]]
     if target.get_type()[1]:
-      type_ *= type_matchup[move.get_type()][target.get_type()[1]] # if target is monotype, target.get_type() should be [some type, None]
+      type_ *= type_matchup[move.get_type()][target.get_type()[1]]
     other = 1 # 1 in most cases, other cases to be implemented
     mod = rand * stab * type_ * other
     damage = ((((2 * user.get_level()) // 5 + 2) * move.get_power() * (atk // dfs) // 50 + 2) * mod) // 255
-    target.damage_hp(damage)
-    print("Did", damage, "damage!")
+    target.mod_current_hp(-damage)
+    battle_msg("Did" + ' ' + str(damage) + " damage!")
     if type_ == 0:
-      print("It had no effect.")
+      battle_msg("It had no effect.")
     elif type_ <= 0.5:
-      print("It's not very effective...")
+      battle_msg("It's not very effective...")
     elif type_ >= 2:
-      print("It's super effective!")
-  # TO-DO: non-damaging effects
+      battle_msg("It's super effective!")
+  # execute effect
+  if move.get_effect():
+    if move.get_effect() == ATTACK_DOWN1_EFFECT:
+      target.mod_atk_stage(-1)
+      battle_msg(target.get_name() +"'s Attack fell!", not is_enemy)
+    elif move.get_effect() == DEFENSE_DOWN1_EFFECT:
+      target.mod_def_stage(-1)
+      battle_msg(target.get_name() +"'s Defense fell!", not is_enemy)
 
 def faint_check(trainer, is_enemy = False):
   if trainer.get_mon_in_battle().get_hp_current() <= 0:
-    prefix = ("Enemy " if is_enemy == True else '')
     trainer.get_mon_in_battle().set_status(FNT)
-    print(prefix + trainer.get_mon_in_battle().get_name(), "fainted!")
+    battle_msg(trainer.get_mon_in_battle().get_name() + " fainted!", is_enemy)
     trainer.set_mon_in_battle(None)
     return True
   return False
 
 def take_turn(trainer, opponent, action, is_enemy = False):
   # TO-DO: allow for more actions in a turn than making a move, e.g. healing
-  prefix = ("Enemy " if is_enemy == True else '')
-  execute_move(trainer.get_mon_in_battle(), opponent.get_mon_in_battle(), action, prefix)
+  execute_move(trainer.get_mon_in_battle(), opponent.get_mon_in_battle(), action, is_enemy)
 
 def battle_player_vs_ai(player, enemy):
   game_over = False
@@ -148,6 +157,7 @@ def battle_player_vs_ai(player, enemy):
       player_fainted = faint_check(player)
       enemy_fainted = faint_check(enemy, True)
       if not enemy_fainted:
+        # AI is a cheating bastard in Gen I, takes its move after you do if it's slower
         take_turn(enemy, player, enemy.move_choice(), True)
         player_fainted = faint_check(player)
         enemy_fainted = faint_check(enemy, True)
