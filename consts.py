@@ -4,10 +4,11 @@
 def auto():
   global counter
   counter += 1
-  return counter
+  return counter - 1
 
 # mons navigation constants
-counter = -1
+NUM_MON_DATA_FIELDS = 8
+counter = 0
 MON_NAME = auto()
 MON_TYPE = auto()
 HP = auto()
@@ -17,8 +18,9 @@ SPD = auto()
 SPC = auto()
 LEARNSET = auto()
 
-# moves navigation constants
-counter = -1
+# move data constants
+NUM_MOVE_DATA_FIELDS = 6
+counter = 0
 MOVE_NAME = auto()
 EFFECT = auto()
 POWER = auto()
@@ -26,14 +28,115 @@ MOVE_TYPE = auto()
 ACCURACY = auto()
 PP = auto()
 
-# Pokémon species constants
+# status condition constants
 counter = 0
-BULBASAUR = auto()
-CHARMANDER = auto()
-SQUIRTLE = auto()
+BRN = auto()
+FRZ = auto()
+PAR = auto()
+PSN = auto()
+SLP = auto()
+FNT = auto()
+
+# trainer class constants
+NUM_TRAINERS = 46 # not counting UnusedJuggler
+counter = 0
+PLAYER = auto()
+YOUNGSTER = auto()
+BUG_CATCHER = auto()
+LASS = auto()
+SAILOR = auto()
+JR_TRAINER_M = auto()
+JR_TRAINER_F = auto()
+POKEMANIAC = auto()
+SUPER_NERD = auto()
+HIKER = auto()
+BIKER = auto()
+BURGLAR = auto()
+ENGINEER = auto()
+FISHER = auto()
+SWIMMER = auto()
+CUE_BALL = auto()
+GAMBLER = auto()
+BEAUTY = auto()
+PSYCHIC = auto()
+ROCKER = auto()
+JUGGLER = auto()
+TAMER = auto()
+BIRD_KEEPER = auto()
+BLACKBELT = auto()
+RIVAL1 = auto()
+PROF_OAK = auto()
+SCIENTIST = auto()
+GIOVANNI = auto()
+ROCKET = auto()
+COOLTRAINER_F = auto()
+COOLTRAINER_M = auto()
+BRUNO = auto()
+BROCK = auto()
+MISTY = auto()
+LT_SURGE = auto()
+ERIKA = auto()
+KOGA = auto()
+BLAINE = auto()
+SABRINA = auto()
+GENTLEMAN = auto()
+RIVAL2 = auto()
+RIVAL3 = auto()
+LORELEI = auto()
+CHANNELER = auto()
+AGATHA = auto()
+LANCE = auto()
+
+trainer_id_to_name = []
+for i in range(NUM_TRAINERS):
+  trainer_id_to_name.append('')
+trainer_id_to_name[YOUNGSTER] = "Youngster"
+trainer_id_to_name[BUG_CATCHER] = "Bug Catcher"
+trainer_id_to_name[LASS] = "Lass"
+trainer_id_to_name[SAILOR] = "Sailor"
+trainer_id_to_name[JR_TRAINER_M] = "Jr. Trainer♂"
+trainer_id_to_name[JR_TRAINER_F] = "Jr. Trainer♀"
+trainer_id_to_name[POKEMANIAC] = "PokéManiac"
+trainer_id_to_name[SUPER_NERD] = "Super Nerd"
+trainer_id_to_name[HIKER] = "Hiker"
+trainer_id_to_name[BIKER] = "Biker"
+trainer_id_to_name[BURGLAR] = "Burglar"
+trainer_id_to_name[ENGINEER] = "Engineer"
+trainer_id_to_name[FISHER] = "Fisher"
+trainer_id_to_name[SWIMMER] = "Swimmer"
+trainer_id_to_name[CUE_BALL] = "Cue Ball"
+trainer_id_to_name[GAMBLER] = "Gambler"
+trainer_id_to_name[BEAUTY] = "Beauty"
+trainer_id_to_name[PSYCHIC] = "Psychic"
+trainer_id_to_name[ROCKER] = "Rocker"
+trainer_id_to_name[JUGGLER] = "Juggler"
+trainer_id_to_name[TAMER] = "Tamer"
+trainer_id_to_name[BIRD_KEEPER] = "Bird Keeper"
+trainer_id_to_name[BLACKBELT] = "Blackbelt"
+trainer_id_to_name[PROF_OAK] = "Prof. Oak"
+trainer_id_to_name[SCIENTIST] = "Scientist"
+trainer_id_to_name[GIOVANNI] = "Giovanni"
+trainer_id_to_name[ROCKET] = "Rocket"
+trainer_id_to_name[COOLTRAINER_F] = "Cooltrainer♀"
+trainer_id_to_name[COOLTRAINER_M] = "Cooltrainer♂"
+trainer_id_to_name[BRUNO] = "Bruno"
+trainer_id_to_name[BROCK] = "Brock"
+trainer_id_to_name[MISTY] = "Misty"
+trainer_id_to_name[LT_SURGE] = "Lt. Surge"
+trainer_id_to_name[ERIKA] = "Erika"
+trainer_id_to_name[KOGA] = "Koga"
+trainer_id_to_name[BLAINE] = "Blaine"
+trainer_id_to_name[SABRINA] = "Sabrina"
+trainer_id_to_name[GENTLEMAN] = "Gentleman"
+trainer_id_to_name[LORELEI] = "Lorelei"
+trainer_id_to_name[CHANNELER] = "Channeler"
+trainer_id_to_name[AGATHA] = "Agatha"
+trainer_id_to_name[LANCE] = "Lance"
 
 # type constants
-counter = -1
+NUM_TYPES = 16 # we are including BIRD type if we want Missingno later
+
+counter = 0
 # physical
 NORMAL = auto()
 FIGHTING = auto()
@@ -55,17 +158,33 @@ DRAGON = auto()
 
 physical_types = [NORMAL, FIGHTING, FLYING, POISON, GROUND, ROCK, BIRD, BUG, GHOST]
 
-type_id_to_name = [
-  "Normal", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bird", "Bug", "Ghost", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dragon"
-]
+type_id_to_name = []
+for i in range(NUM_TYPES):
+  type_id_to_name.append('')
+type_id_to_name[NORMAL] = "Normal"
+type_id_to_name[FIGHTING] = "Fighting"
+type_id_to_name[FLYING] = "Flying"
+type_id_to_name[POISON] = "Poison"
+type_id_to_name[GROUND] = "Ground"
+type_id_to_name[ROCK] = "Rock"
+type_id_to_name[BIRD] = "Bird"
+type_id_to_name[BUG] = "Bug"
+type_id_to_name[GHOST] = "Ghost"
+type_id_to_name[FIRE] = "Fire"
+type_id_to_name[WATER] = "Water"
+type_id_to_name[GRASS] = "Grass"
+type_id_to_name[ELECTRIC] = "Electric"
+type_id_to_name[PSYCHIC_TYPE] = "Psychic"
+type_id_to_name[ICE] = "Ice"
+type_id_to_name[DRAGON] = "Dragon"
 
 # type matchup constants
 NO_EFFECT = 0
 NOT_VERY_EFFECTIVE = 0.5
 EFFECTIVE = 1
+MORE_EFFECTIVE = 1.5
 SUPER_EFFECTIVE = 2
 
-NUM_TYPES = 16 # we are including BIRD type if we want Missingno later
 # type_matchup[TYPE1][TYPE2] is one of the former four constants
 type_matchup = []
 # construct initial type chart
@@ -158,32 +277,3 @@ type_matchup[ELECTRIC][DRAGON] = NOT_VERY_EFFECTIVE
 type_matchup[GRASS][DRAGON] = NOT_VERY_EFFECTIVE
 type_matchup[ICE][DRAGON] = SUPER_EFFECTIVE
 type_matchup[DRAGON][DRAGON] = SUPER_EFFECTIVE
-
-# move constants
-counter = -1
-TACKLE = auto()
-SCRATCH = auto()
-GROWL = auto()
-TAIL_WHIP = auto()
-
-move_lookup_table = {
-  "tackle" : TACKLE,
-  "scratch" : SCRATCH,
-  "growl" : GROWL,
-  "tail_whip" : TAIL_WHIP
-}
-
-# move effect constants
-counter = -1
-NO_ADDITIONAL_EFFECT = auto()
-ATTACK_DOWN1_EFFECT = auto()
-DEFENSE_DOWN1_EFFECT = auto()
-
-# status condition constants
-counter = -1
-BRN = auto()
-FRZ = auto()
-PAR = auto()
-PSN = auto()
-SLP = auto()
-FNT = auto()

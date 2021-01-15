@@ -3,17 +3,17 @@ import random
 
 from consts import *
 
-from mons import mons
-from moves import moves, type_id_to_name
+from mons import mon_table
+from moves import move_table
 
 class Move:
   def __init__(self, id):
-    self.__name = moves[id][MOVE_NAME]
-    self.__effect = moves[id][EFFECT]
-    self.__power = moves[id][POWER]
-    self.__type = moves[id][MOVE_TYPE]
-    self.__accuracy = math.floor(2.55 * moves[id][ACCURACY])
-    self.__pp = moves[id][PP]
+    self.__name = move_table[id][MOVE_NAME]
+    self.__effect = move_table[id][EFFECT]
+    self.__power = move_table[id][POWER]
+    self.__type = move_table[id][MOVE_TYPE]
+    self.__accuracy = math.floor(2.55 * move_table[id][ACCURACY])
+    self.__pp = move_table[id][PP]
     # accuracies are stored as fractions out of 256
     # to convert from percentage to /256, multiply by 2.55 and round down
     # to convert from /256 to percentage, divide by 2.56 and round up
@@ -35,16 +35,16 @@ class Move:
 
 class Pkmn:
   def __init__(self, id, level):
-    self.__name = mons[id][MON_NAME]
+    self.__name = mon_table[id][MON_NAME]
     self.__level = level
-    self.__type = mons[id][MON_TYPE]
+    self.__type = mon_table[id][MON_TYPE]
 
     # base stats
-    self.__atk_base = mons[id][ATK]
-    self.__def_base = mons[id][DEF]
-    self.__spc_base = mons[id][SPC]
-    self.__spd_base = mons[id][SPD]
-    self.__hp_base = mons[id][HP]
+    self.__atk_base = mon_table[id][ATK]
+    self.__def_base = mon_table[id][DEF]
+    self.__spc_base = mon_table[id][SPC]
+    self.__spd_base = mon_table[id][SPD]
+    self.__hp_base = mon_table[id][HP]
 
     # generate IVs
     # https://bulbapedia.bulbagarden.net/wiki/Individual_values#Generation_I_and_II
@@ -71,7 +71,7 @@ class Pkmn:
     self.__spc_stage = 0
     self.__spd_stage = 0
 
-    self.__learnset = mons[id][LEARNSET]
+    self.__learnset = mon_table[id][LEARNSET]
     self.__generate_moveset()
     self.__usable_moves = self.__moveset
     

@@ -3,21 +3,27 @@ import time
 import os
 
 from consts import *
+from moves import *
+from mons import BULBASAUR, SQUIRTLE, CHARMANDER
 from trainer import Trainer
 
 player_name = input("What is your name?\n")
 rival_name = input("What is my grandson's name?\n")
+trainer_id_to_name[PLAYER] = player_name
+trainer_id_to_name[RIVAL1] = rival_name
+trainer_id_to_name[RIVAL2] = rival_name
+trainer_id_to_name[RIVAL3] = rival_name
 starter_choice = int(input("Pick a Pokémon! Your choices are (1) Bulbasaur (2) Squirtle (3) Charmander:\n"))
 
 if starter_choice == 1:
-  player = Trainer(player_name, [5, BULBASAUR])
-  rival = Trainer(rival_name, [5, CHARMANDER])
+  player = Trainer(PLAYER, [5, BULBASAUR])
+  rival1 = Trainer(RIVAL1, [5, CHARMANDER])
 elif starter_choice == 2:
-  player = Trainer(player_name, [5, SQUIRTLE])
-  rival = Trainer(rival_name, [5, BULBASAUR])
+  player = Trainer(PLAYER, [5, SQUIRTLE])
+  rival1 = Trainer(RIVAL1, [5, BULBASAUR])
 elif starter_choice == 3:
-  player = Trainer(player_name, [5, CHARMANDER])
-  rival = Trainer(rival_name, [5, SQUIRTLE])
+  player = Trainer(PLAYER, [5, CHARMANDER])
+  rival1 = Trainer(RIVAL1, [5, SQUIRTLE])
 else:
   print("That's not a choice!")
 
@@ -50,14 +56,14 @@ def check_game_over(player, enemy, player_fainted, enemy_fainted):
     if player_fcm:
       player.send_out_mon(player_fcm)
     else:
-      print(player.get_class_(), "is out of usable Pokémon!")
+      print(player.get_name(), "is out of usable Pokémon!")
       return True
   if enemy_fainted:
     enemy_fcm = enemy.first_conscious_mon()
     if enemy_fcm:
       enemy.send_out_mon(enemy_fcm)
     else:
-      print(player.get_class_(), "defeated", enemy.get_class_() + "!")
+      print(player.get_name(), "defeated", enemy.get_name() + "!")
       return True
 
 def display_game_state(player_mon, enemy_mon):
@@ -66,7 +72,7 @@ def display_game_state(player_mon, enemy_mon):
   display_moveset(player_mon)
 
 def first_round_setup(player, enemy):
-  print(enemy.get_class_(), "wants to fight!")
+  print(enemy.get_name(), "wants to fight!")
   enemy.send_out_mon()
   player.send_out_mon()
 
@@ -84,12 +90,11 @@ def execute_move(user, target, move, is_enemy = False):
     print("But it failed...")
     return False
   # accuracy check
-  # TO-DO: use accuracy formula with in-battle modifiers
   if move.get_accuracy():
     # https://bulbapedia.bulbagarden.net/wiki/Accuracy
     effective_accuracy = move.get_accuracy()
     if not (random.randint(0,255) < effective_accuracy):
-      print(prefix + user.get_name(), "missed!")
+      battle_msg(user.get_name() + " missed!", is_enemy)
       if effective_accuracy == 255:
         print("(In Gen 1, moves with 100% accuracy can still miss 1/256 of the time.)")
       return False
@@ -103,21 +108,34 @@ def execute_move(user, target, move, is_enemy = False):
     else:
       atk = user.get_eff_spc()
       dfs = target.get_eff_spc()
+    print(atk, dfs)
+    
     rand = random.randint(217,255)
-    stab = (1.5 if move.get_type() in user.get_type() else 1)
+    stab = (MORE_EFFECTIVE if move.get_type() in user.get_type() else EFFECTIVE)
     type_ = type_matchup[move.get_type()][target.get_type()[0]]
-    if target.get_type()[1]:
+    print(target.get_type())
+    if target.get_type()[0] != target.get_type()[1]:
       type_ *= type_matchup[move.get_type()][target.get_type()[1]]
-    other = 1 # 1 in most cases, other cases to be implemented
-    mod = rand * stab * type_ * other
-    damage = ((((2 * user.get_level()) // 5 + 2) * move.get_power() * (atk // dfs) // 50 + 2) * mod) // 255
+    
+    # in the 90s, Game Freak didn't want to deal with decimals
+    # so every step that would produce a decimal gets rounded down
+    # GF did this by making stab and type_ multiples of 10 and using int division
+    # we will use int conversion after each / and each * by a non-int
+
+    damage = int((2 * user.get_level()) / 5)
+    damage = int((damage + 2) * atk * move.get_power() / dfs)
+    damage = int(damage / 50)
+    damage = int((damage + 2) * stab)
+    damage = int(damage * type_)
+    damage = int(damage * rand / 255)
+
     target.mod_current_hp(-damage)
     battle_msg("Did" + ' ' + str(damage) + " damage!")
-    if type_ == 0:
+    if type_ == NO_EFFECT:
       battle_msg("It had no effect.")
-    elif type_ <= 0.5:
+    elif type_ <= NOT_VERY_EFFECTIVE:
       battle_msg("It's not very effective...")
-    elif type_ >= 2:
+    elif type_ >= SUPER_EFFECTIVE:
       battle_msg("It's super effective!")
   # execute effect
   if move.get_effect():
@@ -150,7 +168,7 @@ def battle_player_vs_ai(player, enemy):
       first_round = False
     display_game_state(player.get_mon_in_battle(), enemy.get_mon_in_battle())
     # TO-DO: implement PP check for player
-    player_move = player.get_mon_in_battle().get_moveset()[int(input())]
+    player_move = player.move_choice()
     clear()
     if player.get_mon_in_battle().get_eff_spd() > enemy.get_mon_in_battle().get_eff_spd() or (player.get_mon_in_battle().get_eff_spd() == enemy.get_mon_in_battle().get_eff_spd() and random.randint(1,2) == 1):
       take_turn(player, enemy, player_move)
@@ -194,4 +212,4 @@ def battle_player_vs_ai(player, enemy):
 
     
 
-battle_player_vs_ai(player, rival)
+battle_player_vs_ai(player, rival1)
