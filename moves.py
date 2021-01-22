@@ -172,7 +172,7 @@ SUBSTITUTE = auto()
 STRUGGLE = auto()
 
 # move effect constants
-counter = -1
+counter = 0
 NO_ADDITIONAL_EFFECT = auto()
 EFFECT_01 = auto() # unused
 POISON_SIDE_EFFECT1 = auto()
