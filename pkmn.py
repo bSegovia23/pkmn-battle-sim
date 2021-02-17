@@ -1,50 +1,27 @@
 import math
 import random
+import json
 
-from consts import *
+#from mons import mon_table
+#from moves import move_table
+from move import Move
 
-from mons import mon_table
-from moves import move_table
-
-class Move:
-  def __init__(self, id):
-    self.__name = move_table[id][MOVE_NAME]
-    self.__effect = move_table[id][EFFECT]
-    self.__power = move_table[id][POWER]
-    self.__type = move_table[id][MOVE_TYPE]
-    self.__accuracy = math.floor(2.55 * move_table[id][ACCURACY])
-    self.__pp = move_table[id][PP]
-    # accuracies are stored as fractions out of 256
-    # to convert from percentage to /256, multiply by 2.55 and round down
-    # to convert from /256 to percentage, divide by 2.56 and round up
-
-  def get_name(self):
-    return self.__name
-  def get_effect(self):
-    return self.__effect
-  def get_power(self):
-    return self.__power
-  def get_type(self):
-    return self.__type
-  def get_type_name(self):
-    return type_id_to_name[self.__type]
-  def get_accuracy(self):
-    return self.__accuracy
-  def get_accuracy_100(self):
-    return math.ceil(self.__accuracy / 2.56)
+with open('mons.json') as mons:
+  mons = json.load(mons)
+  #print(mons)
 
 class Pkmn:
-  def __init__(self, id, level):
-    self.__name = mon_table[id][MON_NAME]
+  def __init__(self, name, level):
+    self.__name = name
     self.__level = level
-    self.__type = mon_table[id][MON_TYPE]
+    self.__type = mons[name]["type"]
 
     # base stats
-    self.__atk_base = mon_table[id][ATK]
-    self.__def_base = mon_table[id][DEF]
-    self.__spc_base = mon_table[id][SPC]
-    self.__spd_base = mon_table[id][SPD]
-    self.__hp_base = mon_table[id][HP]
+    self.__atk_base = mons[name]["atk"]
+    self.__def_base = mons[name]["def"]
+    self.__spc_base = mons[name]["spc"]
+    self.__spd_base = mons[name]["spd"]
+    self.__hp_base = mons[name]["hp"]
 
     # generate IVs
     # https://bulbapedia.bulbagarden.net/wiki/Individual_values#Generation_I_and_II
@@ -71,7 +48,7 @@ class Pkmn:
     self.__spc_stage = 0
     self.__spd_stage = 0
 
-    self.__learnset = mon_table[id][LEARNSET]
+    self.__learnset = mons[name]["learnset"]
     self.__generate_moveset()
     self.__usable_moves = self.__moveset
     
@@ -118,17 +95,19 @@ class Pkmn:
     self.__spd_stage = min(self.__spd_stage, num_stages)
 
   def __generate_moveset(self):
-    moveset = {}
-    moveset_pos = 1 # cycles through 1-4
+    moveset = []
+    
+    NUM_MOVES = 4
     for entry in self.__learnset:
       if entry[0] <= self.__level:
         for move in entry[1:]:
-          moveset[moveset_pos] = Move(move)
-          moveset_pos += 1
-          if moveset_pos > 4:
-            moveset_pos = 1 # after learning move 4, back to move 1
+          moveset.append(move)
+          if len(moveset) > NUM_MOVES:
+            moveset.pop(0)
       else:
         break
+    for i in range(len(moveset)):
+      moveset[i] = Move(moveset[i])
     self.__moveset = moveset
 
   def set_status(self, status):

@@ -1,0 +1,16 @@
+[[package]]
+category = "main"
+description = "Moves Client API"
+name = "moves"
+optional = false
+python-versions = "*"
+version = "0.1"
+
+[metadata]
+content-hash = "cc70964d2930ffd498cc54f805c690838178183de03aa00222e92022018b2404"
+python-versions = "^3.8"
+
+[metadata.files]
+moves = [
+    {file = "moves-0.1.tar.gz", hash = "sha256:d6064d5d898dafac2d27b32b7fe7667f43ec0a7bdc00202af62edfa9b54b69fb"},
+]

@@ -1,8 +1,7 @@
 import random
 import os
 
-from consts import NO_EFFECT, NOT_VERY_EFFECTIVE, EFFECTIVE, MORE_EFFECTIVE, SUPER_EFFECTIVE, physical_types, type_matchup, FNT
-from moves import ATTACK_DOWN1_EFFECT, DEFENSE_DOWN1_EFFECT
+from consts import NO_EFFECT, NOT_VERY_EFFECTIVE, EFFECTIVE, MORE_EFFECTIVE, SUPER_EFFECTIVE, physical_types, type_map, type_matchup, FNT
 
 def health_bar(mon):
   ratio = mon.get_hp_current() / mon.get_hp()
@@ -23,8 +22,8 @@ def display_mon_state(mon, buffer = ''):
   print(buffer + "   ", mon.get_hp_current(), "/", mon.get_hp())
 
 def display_moveset(mon):
-  for i in range(1,len(mon.get_moveset())+1):
-    print('(' + str(i) + ")", mon.get_moveset()[i].get_name())
+  for i in range(len(mon.get_moveset())):
+    print('(' + str(i+1) + ")", mon.get_moveset()[i].get_name())
     print("Type / " + mon.get_moveset()[i].get_type_name() + ", Power / " + str(mon.get_moveset()[i].get_power()) + ", Accuracy / " + str(mon.get_moveset()[i].get_accuracy_100()))
 
 def check_game_over(player, enemy, player_fainted, enemy_fainted):
@@ -85,12 +84,13 @@ def execute_move(user, target, move, is_enemy = False):
     else:
       atk = user.get_eff_spc()
       dfs = target.get_eff_spc()
-    
+
+    # Calculating damage
     rand = random.randint(217,255)
     stab = (MORE_EFFECTIVE if move.get_type() in user.get_type() else EFFECTIVE)
-    type_ = type_matchup[move.get_type()][target.get_type()[0]]
+    type_ = type_matchup[type_map[move.get_type()]][type_map[target.get_type()[0]]]
     if target.get_type()[0] != target.get_type()[1]:
-      type_ *= type_matchup[move.get_type()][target.get_type()[1]]
+      type_ *= type_matchup[type_map[move.get_type()]][type_map[target.get_type()[1]]]
     
     # in the 90s, Game Freak didn't want to deal with decimals
     # so every step that would produce a decimal gets rounded down
@@ -113,13 +113,327 @@ def execute_move(user, target, move, is_enemy = False):
     elif type_ >= SUPER_EFFECTIVE:
       battle_msg("It's super effective!")
   # execute effect
-  if move.get_effect():
-    if move.get_effect() == ATTACK_DOWN1_EFFECT:
-      target.mod_atk_stage(-1)
-      battle_msg(target.get_name() +"'s Attack fell!", not is_enemy)
-    elif move.get_effect() == DEFENSE_DOWN1_EFFECT:
-      target.mod_def_stage(-1)
-      battle_msg(target.get_name() +"'s Defense fell!", not is_enemy)
+
+  #TODO Unique results for each effect
+  if(move.get_effect() == "NO_ADDITIONAL_EFFECT"):
+    pass
+  elif(move.get_effect == "POISON_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "DRAIN_HP_EFFECT"):
+    pass
+  elif(move.get_effect == "BURN_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "POISON_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "DRAIN_HP_EFFECT"):
+    pass
+  elif(move.get_effect == "BURN_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "FREEZE_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "PARALYZE_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "EXPLODE_EFFECT"):
+    pass
+  elif(move.get_effect == "DREAM_EATER_EFFECT"):
+    pass
+  elif(move.get_effect == "MIRROR_MOVE_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "PAY_DAY_EFFECT"):
+    pass
+  elif(move.get_effect == "SWIFT_EFFECT"):
+    pass
+  elif(move.get_effect() == "ATTACK_DOWN1_EFFECT"):
+    target.mod_atk_stage(-1)
+    print(target.get_name() + "'s Attack fell!")
+  elif(move.get_effect() == "DEFENSE_DOWN1_EFFECT"):
+    target.mod_def_stage(-1)
+    print(target.get_name() + "'s Defense fell!")
+  elif(move.get_effect == "SPEED_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "CONVERSION_EFFECT"):
+    pass
+  elif(move.get_effect == "HAZE_EFFECT"):
+    pass
+  elif(move.get_effect == "BIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "THRASH_PETAL_DANCE_EFFECT"):
+    pass
+  elif(move.get_effect == "SWITCH_AND_TELEPORT_EFFECT"):
+    pass
+  elif(move.get_effect == "TWO_TO_FIVE_ATTACKS_EFFECT"):
+    pass
+  elif(move.get_effect == "FLINCH_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "SLEEP_EFFECT"):
+    pass
+  elif(move.get_effect == "POISON_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "BURN_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "PARALYZE_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "FLINCH_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "OHKO_EFFECT"):
+    pass
+  elif(move.get_effect == "CHARGE_EFFECT"):
+    pass
+  elif(move.get_effect == "SUPER_FANG_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DAMAGE_EFFECT"):
+    pass
+  elif(move.get_effect == "TRAPPING_EFFECT"):
+    pass
+  elif(move.get_effect == "FLY_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_TWICE_EFFECT"):
+    pass
+  elif(move.get_effect == "JUMP_KICK_EFFECT"):
+    pass
+  elif(move.get_effect == "MIST_EFFECT"):
+    pass
+  elif(move.get_effect == "FOCUS_ENERGY_EFFECT"):
+    pass
+  elif(move.get_effect == "RECOIL_EFFECT"):
+    pass
+  elif(move.get_effect == "CONFUSION_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "HEAL_EFFECT"):
+    pass
+  elif(move.get_effect == "TRANSFORM_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "LIGHT_SCREEN_EFFECT"):
+    pass
+  elif(move.get_effect == "REFLECT_EFFECT"):
+    pass
+  elif(move.get_effect == "POISON_EFFECT"):
+    pass
+  elif(move.get_effect == "PARALYZE_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "CONFUSION_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "TWINEEDLE_EFFECT"):
+    pass
+  elif(move.get_effect == "SUBSTITUTE_EFFECT"):
+    pass
+  elif(move.get_effect == "HYPER_BEAM_EFFECT"):
+    pass
+  elif(move.get_effect == "RAGE_EFFECT"):
+    pass
+  elif(move.get_effect == "MIMIC_EFFECT"):
+    pass
+  elif(move.get_effect == "METRONOME_EFFECT"):
+    pass
+  elif(move.get_effect == "LEECH_SEED_EFFECT"):
+    pass
+  elif(move.get_effect == "SPLASH_EFFECT"):
+    pass
+  elif(move.get_effect == "DISABLE_EFFECT"):
+    pass
+    pass
+  elif(move.get_effect == "FREEZE_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "PARALYZE_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "EXPLODE_EFFECT"):
+    pass
+  elif(move.get_effect == "DREAM_EATER_EFFECT"):
+    pass
+  elif(move.get_effect == "MIRROR_MOVE_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_UP1_EFFECT"):
+    pass
+  elif(move.get_effect == "PAY_DAY_EFFECT"):
+    pass
+  elif(move.get_effect == "SWIFT_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_DOWN1_EFFECT"):
+    pass
+  elif(move.get_effect == "CONVERSION_EFFECT"):
+    pass
+  elif(move.get_effect == "HAZE_EFFECT"):
+    pass
+  elif(move.get_effect == "BIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "THRASH_PETAL_DANCE_EFFECT"):
+    pass
+  elif(move.get_effect == "SWITCH_AND_TELEPORT_EFFECT"):
+    pass
+  elif(move.get_effect == "TWO_TO_FIVE_ATTACKS_EFFECT"):
+    pass
+  elif(move.get_effect == "FLINCH_SIDE_EFFECT1"):
+    pass
+  elif(move.get_effect == "SLEEP_EFFECT"):
+    pass
+  elif(move.get_effect == "POISON_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "BURN_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "PARALYZE_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "FLINCH_SIDE_EFFECT2"):
+    pass
+  elif(move.get_effect == "OHKO_EFFECT"):
+    pass
+  elif(move.get_effect == "CHARGE_EFFECT"):
+    pass
+  elif(move.get_effect == "SUPER_FANG_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DAMAGE_EFFECT"):
+    pass
+  elif(move.get_effect == "TRAPPING_EFFECT"):
+    pass
+  elif(move.get_effect == "FLY_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_TWICE_EFFECT"):
+    pass
+  elif(move.get_effect == "JUMP_KICK_EFFECT"):
+    pass
+  elif(move.get_effect == "MIST_EFFECT"):
+    pass
+  elif(move.get_effect == "FOCUS_ENERGY_EFFECT"):
+    pass
+  elif(move.get_effect == "RECOIL_EFFECT"):
+    pass
+  elif(move.get_effect == "CONFUSION_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_UP2_EFFECT"):
+    pass
+  elif(move.get_effect == "HEAL_EFFECT"):
+    pass
+  elif(move.get_effect == "TRANSFORM_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "ACCURACY_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "EVASION_DOWN2_EFFECT"):
+    pass
+  elif(move.get_effect == "LIGHT_SCREEN_EFFECT"):
+    pass
+  elif(move.get_effect == "REFLECT_EFFECT"):
+    pass
+  elif(move.get_effect == "POISON_EFFECT"):
+    pass
+  elif(move.get_effect == "PARALYZE_EFFECT"):
+    pass
+  elif(move.get_effect == "ATTACK_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "DEFENSE_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "SPEED_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "SPECIAL_DOWN_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "CONFUSION_SIDE_EFFECT"):
+    pass
+  elif(move.get_effect == "TWINEEDLE_EFFECT"):
+    pass
+  elif(move.get_effect == "SUBSTITUTE_EFFECT"):
+    pass
+  elif(move.get_effect == "HYPER_BEAM_EFFECT"):
+    pass
+  elif(move.get_effect == "RAGE_EFFECT"):
+    pass
+  elif(move.get_effect == "MIMIC_EFFECT"):
+    pass
+  elif(move.get_effect == "METRONOME_EFFECT"):
+    pass
+  elif(move.get_effect == "LEECH_SEED_EFFECT"):
+    pass
+  elif(move.get_effect == "SPLASH_EFFECT"):
+    pass
+  elif(move.get_effect == "DISABLE_EFFECT"):
+    pass
+
+
 
 def faint_check(trainer, is_enemy = False):
   if trainer.get_mon_in_battle().get_hp_current() <= 0:
@@ -143,7 +457,7 @@ def battle_player_vs_ai(player, enemy):
       first_round = False
     display_game_state(player.get_mon_in_battle(), enemy.get_mon_in_battle())
     # TO-DO: implement PP check for player
-    player_move = player.move_choice()
+    player_move = player.move_choice(True)
     clear()
     if player.get_mon_in_battle().get_eff_spd() > enemy.get_mon_in_battle().get_eff_spd() or (player.get_mon_in_battle().get_eff_spd() == enemy.get_mon_in_battle().get_eff_spd() and random.randint(1,2) == 1):
       take_turn(player, enemy, player_move)

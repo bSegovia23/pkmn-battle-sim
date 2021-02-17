@@ -1,0 +1,2015 @@
+{
+  "Bulbasaur" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl", "Solarbeam"]
+    ]
+  },
+  "Charmander" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Squirtle" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Ivysaur" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Venusaur" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Charmeleon" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Charizard" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Wartortle" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Blastoise" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Caterpie" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Metapod" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Butterfree" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Weedle" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Kakuna" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Beedrill" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Pidgey" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Pidgeotto" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Pidgeot" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Rattata" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Raticate" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Spearow" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Fearow" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Ekans" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Arbok" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Pikachu" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Raichu" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Sandshrew" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Sandlash" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Nidoran F" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Nidorina" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Nidoqueen" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Nidoran M" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Nidorino" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Nidoking" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Clefairy" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Clefable" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Vulpix" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Ninetales" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Jigglypuff" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Wigglytuff" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Zubat" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Golbat" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Oddish" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Gloom" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Vileplume" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Paras" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Parasect" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Venonat" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Venemoth" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Diglett" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Dugtrio" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Meowth" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Persian" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Psyduck" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Golduck" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Mankey" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Primeape" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Growlithe" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Arcanine" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Poliwag" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Poliwhirl" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Poliwrath" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Abra" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Kadabra" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Alakazam" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Machop" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Machoke" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Machamp" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Bellsprout" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Weepinbell" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Victreebel" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Tentacool" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Tentacruel" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Geodude" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Graveler" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Golem" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Ponyta" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Rapidash" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Slowpoke" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Slowbro" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Magnemite" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Magneton" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Farfetch'd" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Doduo" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Dodrio" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Seel" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Dewgong" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Grimer" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Muk" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Shellder" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Cloyster" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Gastly" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Haunter" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Gengar" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Onix" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Drowzee" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Hypno" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Krabby" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Kingler" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Voltorb" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Electrode" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Exeggcute" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Exeggutor" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Cubone" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Marowak" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Hitmonlee" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Hitmonchan" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Lickitung" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Koffing" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Weezing" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Rhyhorn" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Rhydon" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Chansey" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Tangela" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Kangaskhan" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Horsea" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Seadra" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Goldeen" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Seaking" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Staryu" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Starmie" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Mr. Mime" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Scyther" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Jynx" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Electabuzz" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Magmar" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Pinsir" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Tauros" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Magikarp" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Gyarados" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Lapras" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Ditto" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Eevee" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Vaporeon" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Jolteon" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Flareon" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Porygon" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Omanyte" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Omastar" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Kabuto" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Kabutops" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Aerodactyl" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Snorlax" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Articuno" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Zapdos" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Moltres" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Dratini" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Dragonair" :
+  {
+    "id" : 1,
+    "type" : ["Grass", "Poison"],
+    "hp" : 45,
+    "atk" : 49,
+    "def" : 49,
+    "spd" : 45,
+    "spc" : 65,
+    "learnset" :
+    [
+      [1, "Tackle", "Growl"]
+    ]
+  },
+  "Dragonite" :
+  {
+    "type" : ["Fire", "Fire"],
+    "hp" : 39,
+    "atk" : 52,
+    "def" : 43,
+    "spd" : 65,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Mewtwo" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
+  "Mew" :
+  {
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spd": 43,
+    "spc" : 50,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  }
+}
