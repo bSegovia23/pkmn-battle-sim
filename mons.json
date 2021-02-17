@@ -6,48 +6,22 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
-      [1, "Tackle", "Growl", "Solarbeam"]
-    ]
-  },
-  "Charmander" :
-  {
-    "type" : ["Fire", "Fire"],
-    "hp" : 39,
-    "atk" : 52,
-    "def" : 43,
-    "spd" : 65,
-    "spc" : 50,
-    "learnset" :
-    [
-      [1, "Scratch", "Growl"]
-    ]
-  },
-  "Squirtle" :
-  {
-    "type" : ["Water", "Water"],
-    "hp" : 44,
-    "atk" : 48,
-    "def" : 65,
-    "spd": 43,
-    "spc" : 50,
-    "learnset" :
-    [
-      [1, "Tackle", "Tail Whip"]
+      [1, "Tackle", "Growl"]
     ]
   },
   "Ivysaur" :
   {
     "id" : 1,
     "type" : ["Grass", "Poison"],
-    "hp" : 45,
-    "atk" : 49,
-    "def" : 49,
-    "spd" : 45,
-    "spc" : 65,
+    "hp" : 60,
+    "atk" : 62,
+    "def" : 63,
+    "spc" : 80,
+    "spd" : 60,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -55,12 +29,26 @@
   },
   "Venusaur" :
   {
+    "type" : ["Grass", "Poison"],
+    "hp" : 80,
+    "atk" : 82,
+    "def" : 83,
+    "spc" : 100,
+    "spd" : 80,
+    "learnset" :
+    [
+      [1, "Scratch", "Growl"]
+    ]
+  },
+  "Charmander" :
+  {
+    "id" : 4,
     "type" : ["Fire", "Fire"],
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -68,12 +56,13 @@
   },
   "Charmeleon" :
   {
-    "type" : ["Water", "Water"],
-    "hp" : 44,
-    "atk" : 48,
-    "def" : 65,
-    "spd": 43,
-    "spc" : 50,
+    "id" : 5,
+    "type" : ["Fire", "Fire"],
+    "hp" : 58,
+    "atk" : 64,
+    "def" : 58,
+    "spc" : 65,
+    "spd" : 80,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -81,26 +70,41 @@
   },
   "Charizard" :
   {
-    "id" : 1,
-    "type" : ["Grass", "Poison"],
-    "hp" : 45,
-    "atk" : 49,
-    "def" : 49,
-    "spd" : 45,
-    "spc" : 65,
+    "id" : 6,
+    "type" : ["Fire", "Flying"],
+    "hp" : 78,
+    "atk" : 85,
+    "def" : 78,
+    "spc" : 85,
+    "spd" : 100,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
     ]
   },
+  "Squirtle" :
+  {
+    "id" : 7,
+    "type" : ["Water", "Water"],
+    "hp" : 44,
+    "atk" : 48,
+    "def" : 65,
+    "spc" : 50,
+    "spd" : 43,
+    "learnset" :
+    [
+      [1, "Tackle", "Tail Whip"]
+    ]
+  },
   "Wartortle" :
   {
-    "type" : ["Fire", "Fire"],
-    "hp" : 39,
-    "atk" : 52,
-    "def" : 43,
-    "spd" : 65,
-    "spc" : 50,
+    "id" : 8,
+    "type" : ["Water", "Water"],
+    "hp" : 59,
+    "atk" : 63,
+    "def" : 80,
+    "spc" : 65,
+    "spd" : 58,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -109,11 +113,11 @@
   "Blastoise" :
   {
     "type" : ["Water", "Water"],
-    "hp" : 44,
-    "atk" : 48,
-    "def" : 65,
-    "spd": 43,
-    "spc" : 50,
+    "hp" : 79,
+    "atk" : 83,
+    "def" : 100,
+    "spc" : 85,
+    "spd" : 78,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -126,8 +130,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -139,8 +143,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -152,8 +156,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -166,8 +170,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -179,8 +183,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -192,8 +196,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -206,8 +210,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -219,8 +223,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -232,8 +236,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -246,8 +250,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -259,8 +263,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -272,8 +276,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -286,8 +290,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -299,8 +303,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -312,8 +316,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -326,8 +330,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -339,8 +343,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -352,8 +356,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -366,8 +370,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -379,8 +383,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -392,8 +396,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -406,8 +410,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -419,8 +423,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -432,8 +436,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -446,8 +450,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -459,8 +463,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -472,8 +476,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -486,8 +490,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -499,8 +503,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -512,8 +516,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -526,8 +530,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -539,8 +543,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -552,8 +556,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -566,8 +570,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -579,8 +583,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -592,8 +596,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -606,8 +610,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -619,8 +623,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -632,8 +636,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -646,8 +650,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -659,8 +663,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -672,8 +676,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -686,8 +690,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -699,8 +703,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -712,8 +716,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -726,8 +730,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -739,8 +743,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -752,8 +756,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -766,8 +770,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -779,8 +783,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -792,8 +796,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -806,8 +810,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -819,8 +823,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -832,8 +836,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -846,8 +850,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -859,8 +863,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -872,8 +876,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -886,8 +890,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -899,8 +903,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -912,8 +916,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -926,8 +930,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -939,8 +943,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -952,8 +956,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -966,8 +970,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -979,8 +983,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -992,8 +996,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1006,8 +1010,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1019,8 +1023,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1032,8 +1036,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1046,8 +1050,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1059,8 +1063,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1072,8 +1076,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1086,8 +1090,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1099,8 +1103,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1112,8 +1116,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1126,8 +1130,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1139,8 +1143,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1152,8 +1156,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1166,8 +1170,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1179,8 +1183,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1192,8 +1196,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1206,8 +1210,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1219,8 +1223,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1232,8 +1236,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1246,8 +1250,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1259,8 +1263,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1272,8 +1276,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1286,8 +1290,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1299,8 +1303,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1312,8 +1316,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1326,8 +1330,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1339,8 +1343,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1352,8 +1356,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1366,8 +1370,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1379,8 +1383,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1392,8 +1396,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1406,8 +1410,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1419,8 +1423,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1432,8 +1436,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1446,8 +1450,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1459,8 +1463,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1472,8 +1476,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1486,8 +1490,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1499,8 +1503,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1512,8 +1516,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1526,8 +1530,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1539,8 +1543,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1552,8 +1556,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1566,8 +1570,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1579,8 +1583,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1592,8 +1596,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1606,8 +1610,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1619,8 +1623,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1632,8 +1636,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1646,8 +1650,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1659,8 +1663,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1672,8 +1676,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1686,8 +1690,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1699,8 +1703,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1712,8 +1716,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1726,8 +1730,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1739,8 +1743,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1752,8 +1756,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1766,8 +1770,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1779,8 +1783,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1792,8 +1796,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1806,8 +1810,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1819,8 +1823,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1832,8 +1836,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1846,8 +1850,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1859,8 +1863,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1872,8 +1876,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1886,8 +1890,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1899,8 +1903,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1912,8 +1916,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1926,8 +1930,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1939,8 +1943,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1952,8 +1956,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -1966,8 +1970,8 @@
     "hp" : 45,
     "atk" : 49,
     "def" : 49,
-    "spd" : 45,
     "spc" : 65,
+    "spd" : 45,
     "learnset" :
     [
       [1, "Tackle", "Growl"]
@@ -1979,8 +1983,8 @@
     "hp" : 39,
     "atk" : 52,
     "def" : 43,
-    "spd" : 65,
     "spc" : 50,
+    "spd" : 65,
     "learnset" :
     [
       [1, "Scratch", "Growl"]
@@ -1992,8 +1996,8 @@
     "hp" : 44,
     "atk" : 48,
     "def" : 65,
-    "spd": 43,
     "spc" : 50,
+    "spd" : 43,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]
@@ -2001,12 +2005,12 @@
   },
   "Mew" :
   {
-    "type" : ["Water", "Water"],
-    "hp" : 44,
-    "atk" : 48,
-    "def" : 65,
-    "spd": 43,
-    "spc" : 50,
+    "type" : ["Psychic", "Psychic"],
+    "hp" : 100,
+    "atk" : 100,
+    "def" : 100,
+    "spc" : 100,
+    "spd" : 100,
     "learnset" :
     [
       [1, "Tackle", "Tail Whip"]

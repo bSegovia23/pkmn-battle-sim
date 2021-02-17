@@ -119,9 +119,6 @@ class Pkmn:
     return self.__level
   def get_type(self):
     return self.__type
-  def get_type_name(self):
-    return type_id_to_name[self.__type]
-
   def get_hp(self):
     return self.__hp
   def get_hp_current(self):

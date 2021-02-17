@@ -77,11 +77,18 @@ def execute_move(user, target, move, is_enemy = False):
   # do damage if possible
   # TO-DO: implement more modifiers
   if move.get_power():
+    # print("GETTING MOVE TYPE")
+    # input("PAUSING!!!")
+    # print(move.get_type())
     # https://bulbapedia.bulbagarden.net/wiki/Damage#Damage_calculation
-    if move.get_type() in physical_types:
+    if type_map[move.get_type()] in physical_types:
       atk = user.get_eff_atk()
+      # print("EFFECTIVE ATK", atk)
       dfs = target.get_eff_def()
+      # print("EFFECTIVE DFS", dfs)
+      # input("PAUSING!!!!")
     else:
+      # input("YOU ARE SPECIAL!!!")
       atk = user.get_eff_spc()
       dfs = target.get_eff_spc()
 
@@ -115,6 +122,8 @@ def execute_move(user, target, move, is_enemy = False):
   # execute effect
 
   #TODO Unique results for each effect
+  # effect_dictionary = Effect_Dict()
+  # effect_dictionary.modifyStats(move.get_effect(), target)
   if(move.get_effect() == "NO_ADDITIONAL_EFFECT"):
     pass
   elif(move.get_effect == "POISON_SIDE_EFFECT1"):

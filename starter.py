@@ -25,6 +25,15 @@ def starter():
     elif starter_choice == 3:
       player = Trainer(player_name, [5, "Charmander"])
       rival1 = Trainer(rival_name, [5, "Squirtle"])
+    # if starter_choice == 1:
+    #   player = Trainer(player_name, [50, "Venusaur"])
+    #   rival1 = Trainer(rival_name, [50, "Charizard"])
+    # elif starter_choice == 2:
+    #   player = Trainer(player_name, [50, "Blastoise"])
+    #   rival1 = Trainer(rival_name, [50, "Venusaur"])
+    # elif starter_choice == 3:
+    #   player = Trainer(player_name, [50, "Charizard"])
+    #   rival1 = Trainer(rival_name, [50, "Blastoise"])
     else:
       print("That's not a choice!")
       return
